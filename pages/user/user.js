@@ -68,9 +68,19 @@ Page({
               console.log('purePhoneNumber==' + res.data.RspData.Data.purePhoneNumber);
               wx.setStorageSync("phoneNumber", res.data.RspData.Data.purePhoneNumber);
 
-              wx.navigateTo({
-                url: '../user/user'
-              })
+              if (res.data.RspData.Data.phoneNumber == 'undefined') {
+                wx.showModal({
+                  content: '获取手机号失败，请重新点击关联！',
+                  showCancel: false,
+                  success: function (res) {
+                    if (res.confirm) {
+                      console.log('用户点击确定')
+                    }
+                  }
+                });
+              } else {
+                
+              }
             },
             fail: function (res) {
               console.log(res.data);

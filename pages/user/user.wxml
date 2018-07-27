@@ -1,15 +1,27 @@
 <!--pages/user/user.wxml-->
 <view class="container1">
-  <view class="userinfo">
-    <block wx:if="{{!hasUserInfo}}">
+  <block wx:if="{{!hasUserInfo}}">
+    <view class="userinfo">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/user.png" mode="cover"></image>
       <text bindtap="login" class="userinfo-mes">点击登录</text>
-    </block>
-    <block wx:else>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="userinfo">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-mes">{{userInfo.nickName}}</text>
       <text class="userinfo-mes">{{phoneNumber}}</text>
-      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 关联账号 </button>
-    </block>
-  </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">关联账号</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">联系信息</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+  </block>
+  
 </view>
