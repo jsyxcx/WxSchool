@@ -1,0 +1,15 @@
+<!--pages/user/user.wxml-->
+<view class="container1">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/user.png" mode="cover"></image>
+      <text bindtap="login" class="userinfo-mes">点击登录</text>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-mes">{{userInfo.nickName}}</text>
+      <text class="userinfo-mes">{{phoneNumber}}</text>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 关联账号 </button>
+    </block>
+  </view>
+</view>

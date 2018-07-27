@@ -1,0 +1,34 @@
+/* pages/user/user.wxss */
+.container1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+.userinfo {
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-mes {
+  color: #aaa;
+  margin-left: 100rpx;
+}
+
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
