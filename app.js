@@ -10,6 +10,7 @@ App({
     //     content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
     //   })
     // }
+    //
     console.log('onLaunch')
     //调用API从本地缓存中获取数据
     // var logs = wx.getStorageSync('logs') || []
