@@ -46,6 +46,17 @@ Page({
       url: '../user/login'
     })
   },
+  logout: function(){
+    app.globalData.userInfo = null
+    this.setData({
+      userInfo: null,
+      hasUserInfo: false
+    })
+
+    wx.switchTab({
+      url: '../user/user'
+    })
+  },
   getPhoneNumber: function (e) {
     console.log({ encryptedData: e.detail.encryptedData, iv: e.detail.iv })
     var encryptedData = e.detail.encryptedData;

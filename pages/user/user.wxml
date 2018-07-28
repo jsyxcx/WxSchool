@@ -21,6 +21,7 @@
             <view class="weui-cell__bd">联系信息</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
+        <button class="weui-btn" type="primary" bindtap='logout'>退出</button>
     </view>
   </block>
   
