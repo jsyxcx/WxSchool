@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/paper/paper",
     "pages/user/user",
-    "pages/user/login"
+    "pages/user/login",
+    "pages/user/link"
   ],
   "window":{
     "backgroundTextStyle":"light",

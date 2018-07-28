@@ -13,7 +13,7 @@
       <text class="userinfo-mes">{{phoneNumber}}</text>
     </view>
     <view class="weui-cells weui-cells_after-title">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="../user/link" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__bd">关联账号</view>
             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </navigator>
