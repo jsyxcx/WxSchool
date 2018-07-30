@@ -1,5 +1,6 @@
 <!--pages/user/login.wxml-->
 <view class="container1">
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
-    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 微信登录 </button> -->
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+  </view>
 </view>

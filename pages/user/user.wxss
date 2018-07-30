@@ -1,13 +1,4 @@
 /* pages/user/user.wxss */
-.container1 {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-  box-sizing: border-box;
-} 
-
 .userinfo {
   display: flex;
   flex-direction:row;
