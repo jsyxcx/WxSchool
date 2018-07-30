@@ -1,0 +1,12 @@
+<!--pages/user/contactInfo.wxml-->
+<!--联系信息页面-->
+<view class="page box-margin">
+    <text>{{respData}}</text>
+    <block wx:if="{{canClick}}">
+         <button class="weui-btn" type="primary" bindtap='getInfo'>走你</button>
+    </block>
+    <block wx:else>
+          <button class="weui-btn" type="primary" disabled>别点了</button>
+    </block>
+   
+</view>

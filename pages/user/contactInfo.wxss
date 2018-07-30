@@ -1,0 +1,7 @@
+.box-margin{
+   margin:25px;
+   font-size: 14px;
+}
+.mini-btn{
+    margin:25px;
+}
