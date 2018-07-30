@@ -42,6 +42,7 @@ Page({
                   console.log(res.data);
                   console.log('openId==' + res.data.RspData.Data.openId);
                   console.log('unionId==' + res.data.RspData.Data.unionId);
+                  wx.setStorageSync("openId", res.data.RspData.Data.openId);
                   wx.setStorageSync("unionId", res.data.RspData.Data.unionId);
                   app.globalData.userId = res.data.RspData.Data.unionId;
 
