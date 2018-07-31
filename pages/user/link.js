@@ -1,4 +1,5 @@
 // pages/user/link.js
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
 Page({
 
   /**
@@ -14,6 +15,6 @@ Page({
   onLoad: function (options) {
     this.setData({
       inputPhone: options.phone
-    });
+    })
   }
 })

@@ -5,7 +5,7 @@ const Big = require('../../utils/encrypt/RSA/BigInt.js')
 
 var RSAEncrypt = (function(mod) {
 	mod.enctype = function(encryptStr) {
-		var shakeHand = storageKeyName.SHAKEHAND;
+    var shakeHand = wx.getStorageSync(storageKeyName.shakeHand);
 		//加密
 		Big.setMaxDigits(129);
     var key00 = new RSA.RSAKeyPair(shakeHand.Exponent, '', shakeHand.Modulus);

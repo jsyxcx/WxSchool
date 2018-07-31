@@ -1,6 +1,6 @@
 // pages/user/login.js
 const app = getApp()
-
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
 Page({
 
   /**
@@ -26,7 +26,7 @@ Page({
         var code = res.code;
         if (code) {
           console.log('code==' + code)
-          wx.setStorageSync("code", code);
+          wx.setStorageSync(storageKeyName.code, code);
           wx.getUserInfo({ //获取用户信息
             success: function (res) {
               console.log({ encryptedData: res.encryptedData, iv: res.iv, code: code });
@@ -42,8 +42,8 @@ Page({
                   console.log(res.data);
                   console.log('openId==' + res.data.RspData.Data.openId);
                   console.log('unionId==' + res.data.RspData.Data.unionId);
-                  wx.setStorageSync("openId", res.data.RspData.Data.openId);
-                  wx.setStorageSync("unionId", res.data.RspData.Data.unionId);
+                  wx.setStorageSync(storageKeyName.openId, res.data.RspData.Data.openId);
+                  wx.setStorageSync(storageKeyName.unionId, res.data.RspData.Data.unionId);
                   app.globalData.userId = res.data.RspData.Data.unionId;
 
                   wx.switchTab({

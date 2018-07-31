@@ -52,8 +52,8 @@ var postDataEncry = function (url, encryData, commonData, flag, callback) {
             success: function (success_data) {
               if (success_data.RspCode == 6) { //令牌过期
                 //续订令牌
-                var publicParameter = storageKeyName.PUBLICPARAMETER;
-                var personal = storageKeyName.PERSONALINFO;
+                var publicParameter = wx.getStorageSync(storageKeyName.publicParameter);
+                var personal = wx.getStorageSync(storageKeyName.personalInfo);
                 //需要参数
                 var comData = {
                   uuid: publicParameter.uuid,
@@ -67,12 +67,10 @@ var postDataEncry = function (url, encryData, commonData, flag, callback) {
                 //令牌续订
                 postDataEncry('TokenReset', {}, comData, 0, function (data1) {
                   if (data1.RspCode == 0) {
-                    // var tempInfo00 = storageKeyName.PERSONALINFO;
                     personal.utoken = data1.RspData;
-                    // store.set(window.storageKeyName.PERSONALINFO, tempInfo00);
-                    storageKeyName.PERSONALINFO = personal;
+                    wx.setStorageSync(storageKeyName.personalInfo, personal);
                     var urlArr = url.split('/');
-                    var tempData = JSON.parse(data);
+                    var tempData = JSON.parse(tempData);
                     tempData.utoken = data1.RspData;
                     delete tempData.sign;
                     console.log('urlArr:' + urlArr[urlArr.length - 1]);
