@@ -34,8 +34,8 @@ var storageKeyName = (function (mod) {
   mod.unionId = 'unionId';
   mod.shakeHand = 'shakeHand';//公钥
   mod.UUID = 'uuid';
-  mod.shakeType = 'wxxcx';//小程序握手类型
-  mod.appId = 'wxlg';
+  mod.shakeType = 'wxlg';//小程序握手类型
+  mod.appId = 'wxxcx';
   mod.publicParameter = 'publicParameter'//共用参数
   mod.personalInfo = 'personalInfo'; //个人信息，登录成功后返回值
    /***********key值 end *****************/
