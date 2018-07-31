@@ -11,14 +11,14 @@
     </view>
   </view>
   <view class="weui-cells__title">账号身份列表</view>
-  <radio-group class="radio-group radio-acc" bindchange="">
+  <radio-group class="radio-group radio-acc" bindchange="changeAcc">
     <view style="display:flex; flex-direction:column;">
       <view wx:for="{{accInfos}}" wx:for-index="index" wx:for-item="item">
-        <radio value="{{item.uid}}" bindtap='radio' data-id="{{index+1}}" checked="true"/>{{item.uname}}（{{item.utp}}）
+        <radio value="{{item.uid}}&{{item.utp}}" bindtap='radio' data-id="{{index+1}}" checked="false"/>{{item.uname}}（{{item.utpval}}）
       </view>
     </view>
   </radio-group>
   <view class="page__bd page__bd_spacing">
-    <button class="weui-btn" type="primary">关联</button>
+    <button class="weui-btn" type="primary" bindtap='link'>关联</button>
   </view>
 </view>

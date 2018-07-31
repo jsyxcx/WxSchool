@@ -9,7 +9,9 @@ Page({
    */
   data: {
     inputPhone: '',
-    accInfos: []
+    accInfos: [],
+    selUid: '',
+    selUtp: ''
   },
 
   /**
@@ -49,19 +51,32 @@ Page({
           var accInfo = new Object();
           accInfo.uid = accInfoList[i].uid;
           accInfo.uname = accInfoList[i].uname;
+          accInfo.utp = accInfoList[i].utp;
           if(accInfoList[i].utp==0){
-            accInfo.utp = '老师'
+            accInfo.utpval = '老师'
           } else if (accInfoList[i].utp == 1) {
-            accInfo.utp = '家长'
+            accInfo.utpval = '家长'
           } else {
-            accInfo.utp = '学生'
+            accInfo.utpval = '学生'
           }
           accInfos.push(accInfo);
+          obj.setData({selUid: accInfo.uid});
+          obj.setData({selUtp: accInfo.utp});
         }
         obj.setData({ accInfos: accInfos })
+       
         console.log(obj.data.accInfos)
 
       });
     });
+  },
+  changeAcc: function(e){
+    console.log('radio发生change事件，携带value值为：', e.detail.value);
+    this.setData({ selUid: e.detail.value.substring(0, e.detail.value.indexOf('&')) });
+    this.setData({ selUtp: e.detail.value.substring(e.detail.value.indexOf('&') + 1, e.detail.value.length) });
+  },
+  link: function(){
+    console.log('selUid===' + this.data.selUid);
+    console.log('selUtp===' + this.data.selUtp);
   }
 })

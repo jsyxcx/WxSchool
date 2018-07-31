@@ -69,8 +69,8 @@ Page({
   linkPage: function(){
     console.log("this.data.inputPhone==" + this.data.inputPhone);
     wx.redirectTo({
-      url: '../user/link?phone=' + this.data.inputPhone,
-      //url: '../user/link?phone=18560237656'
+      //url: '../user/link?phone=' + this.data.inputPhone,
+      url: '../user/link?phone=18560237656'
     })
   }
 })
