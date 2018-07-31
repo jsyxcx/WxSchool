@@ -6,7 +6,7 @@
             <view class="weui-label">手机号：</view>
         </view>
         <view class="weui-cell__bd">
-            <view class="weui-label">{{inputPhone}}</view>
+            <text>{{inputPhone}}</text>
         </view>
     </view>
   </view>
