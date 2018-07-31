@@ -22,7 +22,6 @@ var storageKeyName = (function (mod) {
     default:
       break;
   }
-  mod.APPID = 'cn.jinshiye.wechat'; //个人信息，登录成功后返回值
   mod.SIGNKEY = 'jsy309'; //签名密钥
   /***********常量 end *****************/
 
@@ -33,9 +32,10 @@ var storageKeyName = (function (mod) {
   mod.code = 'code';
   mod.openId = 'openId';
   mod.unionId = 'unionId';
-  mod.shakeHand = 'shakeHand';
+  mod.shakeHand = 'shakeHand';//公钥
   mod.UUID = 'uuid';
-  mod.shakeType = 'wxxcx_wxlg';//小程序握手类型
+  mod.shakeType = 'wxlg';//小程序握手类型
+  mod.appId = 'wxxcx';
   mod.publicParameter = 'publicParameter'//共用参数
   mod.personalInfo = 'personalInfo'; //个人信息，登录成功后返回值
    /***********key值 end *****************/

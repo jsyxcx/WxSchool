@@ -39,6 +39,7 @@ App({
     var httpUtil = require('/utils/encrypt/publicProtocolNew.js')
     var uuid = uuidv1();
     wx.setStorageSync(storageKeyName.UUID, uuid);
+    wx.setStorageSync(storageKeyName.appId, storageKeyName.appId);
     wx.setStorageSync(storageKeyName.shakeType, storageKeyName.shakeType);
     //需要加密的数据
     var enData0 = {};
@@ -46,7 +47,7 @@ App({
     var comData0 = {
       uuid: uuid, //用户设备号
       shaketype: wx.getStorageSync(storageKeyName.shakeType), //小程序握手类型
-      appid: storageKeyName.APPID //这里暂时放一个自定义包名
+      appid: wx.getStorageSync(storageKeyName.appId) //appid
     };
     httpUtil.postDataEncry('ShakeHand', enData0, comData0, 0, function (data) {
       wx.setStorageSync(storageKeyName.shakeHand, data.data.RspData);

@@ -11,57 +11,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    respData:'点击按钮获取平台用户信息',
-    canClick:true
+    respData: '点击按钮获取平台用户信息',
+    canClick: true
   },
   getInfo: function () {
-    var obj=this;
-    var uuid = uuidv1();
-    wx.setStorageSync(storageKeyName.UUID, uuid);
-    //1.1 握手
-    //需要加密的数据
-    var enData0 = {};
-    //不需要加密的数据
-    var comData0 = {
-      uuid: uuid, //用户设备号
-      shaketype: wx.getStorageSync(storageKeyName.shakeType), //小程序握手类型
-      appid: storageKeyName.APPID //这里暂时放一个自定义包名
+    if (wx.getStorageSync(storageKeyName.phoneNumber) == '') {
+      console.log("error", "请先获取手机号")
+    }
+    var obj = this;
+    //4.17 微信小程序用户鉴权
+    var enData1 = {
+      wxid: wx.getStorageSync(storageKeyName.unionId)
     };
-    httpUtil.postDataEncry('ShakeHand', enData0, comData0, 0, function (data) {
-      wx.setStorageSync(storageKeyName.shakeHand, data.data.RspData);
-      // console.log(JSON.stringify(storageKeyName.SHAKEHAND ))
-
-      //4.17 微信小程序用户鉴权
-      var enData1 = {
-        wxid: wx.getStorageSync(storageKeyName.unionId)
+    var comData1 = {
+      uuid: wx.getStorageSync(storageKeyName.UUID), //用户设备号
+      appid: wx.getStorageSync(storageKeyName.appId), //appid
+      shaketype: wx.getStorageSync(storageKeyName.shakeType)
+    };
+    httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
+      // console.log(JSON.stringify(data.data.RspData))
+      //4.18 	小程序用户手机关联的用户数据
+      var respData = data.data.RspData;
+      var enData2 = {};
+      var comData2 = {
+        uuid: wx.getStorageSync(storageKeyName.UUID), //用户设备号
+        appid: wx.getStorageSync(storageKeyName.appId), //appid
+        mobile: wx.getStorageSync(storageKeyName.phoneNumber),
+        utoken: respData.utoken
       };
-      var comData1 = {
-        uuid: uuid, //用户设备号
-        appid: storageKeyName.APPID, //这里暂时放一个自定义包名
-        shaketype: 'wxxcx_wxlg'
-      };
-      httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
+      httpUtil.postDataEncry('WxMobileUsers', enData2, comData2, 0, function (data) {
         // console.log(JSON.stringify(data.data.RspData))
+        obj.setData({
+          respData: JSON.stringify(data.data.RspData),
+          canClick: false
+        })
 
-        //4.18 	小程序用户手机关联的用户数据
-
-        var respData = data.data.RspData;
-        var enData2 = {};
-        var comData2 = {
-          uuid: uuid, //用户设备号
-          appid: storageKeyName.APPID, //这里暂时放一个自定义包名
-          mobile: wx.getStorageSync(storageKeyName.phoneNumber),
-          utoken: respData.utoken
-        };
-        httpUtil.postDataEncry('WxMobileUsers', enData2, comData2, 0, function (data) {
-          console.log(JSON.stringify(data.data.RspData))
-          // obj.respData = JSON.stringify(data.data.RspData)
-          obj.setData({
-            respData: JSON.stringify(data.data.RspData),
-            canClick:false
-          })
-
-        });
       });
     });
   },
