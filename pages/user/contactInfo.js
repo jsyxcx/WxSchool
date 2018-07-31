@@ -53,7 +53,7 @@ Page({
           utoken: respData.utoken
         };
         httpUtil.postDataEncry('WxMobileUsers', enData2, comData2, 0, function (data) {
-          // console.log(JSON.stringify(data.data.RspData))
+          console.log(JSON.stringify(data.data.RspData))
           // obj.respData = JSON.stringify(data.data.RspData)
           obj.setData({
             respData: JSON.stringify(data.data.RspData),

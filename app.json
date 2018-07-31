@@ -5,7 +5,8 @@
     "pages/user/user",
     "pages/user/login",
     "pages/user/link",
-    "pages/user/contactInfo"
+    "pages/user/contactInfo",
+    "pages/user/getPhone"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -3,15 +3,12 @@
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
-            <view class="weui-label">关联手机号：</view>
+            <view class="weui-label">手机号：</view>
         </view>
         <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入手机号" value="{{inputPhone}}"/>
+            <view class="weui-label">{{inputPhone}}</view>
         </view>
     </view>
-  </view>
-  <view class="page__bd page__bd_spacing">
-    <button class="weui-btn" type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
   </view>
   <view class="weui-cells__title">账号身份列表</view>
   <radio-group class="radio-group radio-acc" bindchange="">
@@ -25,6 +22,6 @@
     </view>
   </radio-group>
   <view class="page__bd page__bd_spacing">
-    <button class="weui-btn" type="default">关联账号</button>
+    <button class="weui-btn" type="primary">关联</button>
   </view>
 </view>
