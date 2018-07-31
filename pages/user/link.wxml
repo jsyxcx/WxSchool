@@ -13,11 +13,8 @@
   <view class="weui-cells__title">账号身份列表</view>
   <radio-group class="radio-group radio-acc" bindchange="">
     <view style="display:flex; flex-direction:column;">
-      <view>
-        <radio value="" bindtap='radio' data-id="1" checked="true"/>测试老师（教师）
-      </view>
-      <view>
-        <radio value="" bindtap='radio' data-id="2" checked="false"/>kk（家长）
+      <view wx:for="{{accInfos}}" wx:for-index="index" wx:for-item="item">
+        <radio value="{{item.uid}}" bindtap='radio' data-id="{{index+1}}" checked="true"/>{{item.uname}}（{{item.utp}}）
       </view>
     </view>
   </radio-group>
