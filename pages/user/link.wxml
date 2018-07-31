@@ -13,4 +13,18 @@
   <view class="page__bd page__bd_spacing">
     <button class="weui-btn" type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
   </view>
+  <view class="weui-cells__title">账号身份列表</view>
+  <radio-group class="radio-group radio-acc" bindchange="">
+    <view style="display:flex; flex-direction:column;">
+      <view>
+        <radio value="" bindtap='radio' data-id="1" checked="true"/>测试老师（教师）
+      </view>
+      <view>
+        <radio value="" bindtap='radio' data-id="2" checked="false"/>kk（家长）
+      </view>
+    </view>
+  </radio-group>
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="default">关联账号</button>
+  </view>
 </view>
