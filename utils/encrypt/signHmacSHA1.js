@@ -1,5 +1,5 @@
 //将发送请求时的参数，进行签名
-const CryptoJS = require('../../utils/js/crypto-js/crypto-js.js')
+const CryptoJS = require('../../utils/encrypt/crypto-js/crypto-js.js')
 
 var signHmacSHA1=(function(mod){
 	mod.sign=function(message,value,callback){

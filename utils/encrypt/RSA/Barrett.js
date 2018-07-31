@@ -13,7 +13,7 @@
 // Dave Shapiro
 // dave@ohdave.com 
 
-const Big = require('../../js/RSA/BigInt.js')
+const Big = require('../../encrypt/RSA/BigInt.js')
 
 function BarrettMu(m)
 {

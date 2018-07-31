@@ -1,7 +1,8 @@
 // pages/user/contactInfo.js
 
-const storageKeyName = require('../../utils/js/storageKeyName.js')
-const httpUtil =require('../../utils/js/publicProtocolNew.js')
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
+const httpUtil = require('../../utils/encrypt/publicProtocolNew.js')
+var uuidv1 = require('../../utils/uuid/we-uuidv1')
 
 
 Page({
@@ -15,15 +16,7 @@ Page({
   },
   getInfo: function () {
     var obj=this;
-    var uuid = wx.getStorageSync("openId");
-    if (uuid == undefined || uuid == null || uuid==''){
-      wx.showToast({
-        title: '你还没用登录呢，请先登录',
-        icon: 'none',
-        duration: 2000
-      })
-      return -1;
-    }
+    var uuid = uuidv1();
     //1.1 握手
     //需要加密的数据
     var enData0 = {};

@@ -12,8 +12,8 @@
 // 
 // Dave Shapiro
 // dave@ohdave.com 
-const Big = require('../../js/RSA/BigInt.js')
-const BarrettMu = require('../../js/RSA/Barrett.js')
+const Big = require('../../encrypt/RSA/BigInt.js')
+const BarrettMu = require('../../encrypt/RSA/Barrett.js')
 
 function RSAKeyPair(encryptionExponent, decryptionExponent, modulus)
 {

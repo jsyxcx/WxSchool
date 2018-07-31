@@ -1,7 +1,7 @@
 //对需要的数据，进行签名
-const storageKeyName = require('../../utils/js/storageKeyName.js')
-const RSA = require('../../utils/js/RSA/RSA.js')
-const Big = require('../../utils/js/RSA/BigInt.js')
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
+const RSA = require('../../utils/encrypt/RSA/RSA.js')
+const Big = require('../../utils/encrypt/RSA/BigInt.js')
 
 var RSAEncrypt = (function(mod) {
 	mod.enctype = function(encryptStr) {
