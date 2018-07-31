@@ -31,6 +31,28 @@ App({
         console.log("过期了");
       }
     });
+
+
+    //1.1 握手
+    var uuidv1 = require('/utils/uuid/we-uuidv1.js')
+    var storageKeyName = require('/utils/encrypt/storageKeyName.js')
+    var httpUtil = require('/utils/encrypt/publicProtocolNew.js')
+    var uuid = uuidv1();
+    wx.setStorageSync(storageKeyName.UUID, uuid);
+    wx.setStorageSync(storageKeyName.shakeType, storageKeyName.shakeType);
+    //需要加密的数据
+    var enData0 = {};
+    //不需要加密的数据
+    var comData0 = {
+      uuid: uuid, //用户设备号
+      shaketype: wx.getStorageSync(storageKeyName.shakeType), //小程序握手类型
+      appid: storageKeyName.APPID //这里暂时放一个自定义包名
+    };
+    httpUtil.postDataEncry('ShakeHand', enData0, comData0, 0, function (data) {
+      wx.setStorageSync(storageKeyName.shakeHand, data.data.RspData);
+      console.log('握手成功')
+    });
+
     // }
   },
   globalData: {

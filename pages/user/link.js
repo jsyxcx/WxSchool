@@ -1,4 +1,5 @@
 // pages/user/link.js
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
 Page({
 
   /**
@@ -37,7 +38,7 @@ Page({
               console.log(res.data);
               console.log('phoneNumber==' + res.data.RspData.Data.phoneNumber);
               console.log('purePhoneNumber==' + res.data.RspData.Data.purePhoneNumber);
-              wx.setStorageSync("phoneNumber", res.data.RspData.Data.purePhoneNumber);
+              wx.setStorageSync(storageKeyName.phoneNumber, res.data.RspData.Data.purePhoneNumber);
 
               if (res.data.RspData.Data.purePhoneNumber == undefined) {
                 wx.showModal({

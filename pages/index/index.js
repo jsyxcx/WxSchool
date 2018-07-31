@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
 Page({
   data: {
     motto: 'Building...',
@@ -71,7 +71,7 @@ Page({
               console.log(res2.data);
               console.log('phoneNumber==' + res2.data.RspData.Data.phoneNumber);
               console.log('purePhoneNumber==' + res2.data.RspData.Data.purePhoneNumber);
-              wx.setStorageSync("phoneNumber", res2.data.RspData.Data.purePhoneNumber);
+              wx.setStorageSync(storageKeyName.phoneNumber, res2.data.RspData.Data.purePhoneNumber);
             },
             fail: function (res2) {
               console.log(res2.data);

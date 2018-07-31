@@ -17,27 +17,28 @@ Page({
   getInfo: function () {
     var obj=this;
     var uuid = uuidv1();
+    wx.setStorageSync(storageKeyName.UUID, uuid);
     //1.1 握手
     //需要加密的数据
     var enData0 = {};
     //不需要加密的数据
     var comData0 = {
       uuid: uuid, //用户设备号
-      shaketype: 'wxSign', //注册(reg),登录(login),修改密码(repw)
+      shaketype: wx.getStorageSync(storageKeyName.shakeType), //小程序握手类型
       appid: storageKeyName.APPID //这里暂时放一个自定义包名
     };
     httpUtil.postDataEncry('ShakeHand', enData0, comData0, 0, function (data) {
-      storageKeyName.SHAKEHAND = data.data.RspData;
+      wx.setStorageSync(storageKeyName.shakeHand, data.data.RspData);
       // console.log(JSON.stringify(storageKeyName.SHAKEHAND ))
 
       //4.17 微信小程序用户鉴权
       var enData1 = {
-        wxid: wx.getStorageSync('unionId')
+        wxid: wx.getStorageSync(storageKeyName.unionId)
       };
       var comData1 = {
         uuid: uuid, //用户设备号
         appid: storageKeyName.APPID, //这里暂时放一个自定义包名
-        shaketype: 'wxSign'
+        shaketype: 'wxxcx_wxlg'
       };
       httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
         // console.log(JSON.stringify(data.data.RspData))
@@ -49,7 +50,7 @@ Page({
         var comData2 = {
           uuid: uuid, //用户设备号
           appid: storageKeyName.APPID, //这里暂时放一个自定义包名
-          mobile: wx.getStorageSync("phoneNumber"),
+          mobile: wx.getStorageSync(storageKeyName.phoneNumber),
           utoken: respData.utoken
         };
         httpUtil.postDataEncry('WxMobileUsers', enData2, comData2, 0, function (data) {
