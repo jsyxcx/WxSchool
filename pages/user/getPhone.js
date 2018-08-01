@@ -1,20 +1,47 @@
 // pages/user/getPhone.js
+const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
+const httpUtil = require('../../utils/encrypt/publicProtocolNew.js')
+var uuidv1 = require('../../utils/uuid/we-uuidv1')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    inputPhone: ''
+    inputPhone: '',
+    linkUtname: '',
+    linkUtp: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (wx.getStorageInfoSync("phoneNumber") == 'undefined') {
-
-    }
+    var that = this;
+    var enData1 = {
+      wxid: wx.getStorageSync(storageKeyName.unionId)
+    };
+    var comData1 = {
+      uuid: wx.getStorageSync(storageKeyName.UUID), //用户设备号
+      appid: wx.getStorageSync(storageKeyName.appId), //appid
+      shaketype: wx.getStorageSync(storageKeyName.shakeType)
+    };
+    httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
+      // console.log(JSON.stringify(data.data.RspData))
+      var respData = data.data.RspData;
+      var utpval = '';
+      if (respData.utp == 0) {
+        utpval = '老师'
+      } else if (respData.utp == 1) {
+        utpval = '家长'
+      } else {
+        utpval = '学生'
+      }
+      that.setData({
+        linkUtname: respData.utname,
+        linkUtp: utpval
+      })
+    })
   },
   getPhoneNumber: function (e) {
     console.log({ encryptedData: e.detail.encryptedData, iv: e.detail.iv })
@@ -68,9 +95,21 @@ Page({
   },
   linkPage: function(){
     console.log("this.data.inputPhone==" + this.data.inputPhone);
-    wx.redirectTo({
-      url: '../user/link?phone=' + this.data.inputPhone,
-      //url: '../user/link?phone=18560237656'
-    })
+    if (this.data.inputPhone == ''){
+      wx.showModal({
+        content: '请先输入关联手机号！',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      });
+    } else {
+      wx.redirectTo({
+        url: '../user/link?phone=' + this.data.inputPhone,
+        //url: '../user/link?phone=18560237656'
+      })
+    }
   }
 })

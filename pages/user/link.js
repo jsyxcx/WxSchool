@@ -94,6 +94,30 @@ Page({
     };
     httpUtil.postDataEncry('WxUserUn', enData1, comData1, 0, function (data) {
       console.log(JSON.stringify(data.data.RspData))
+      console.log(JSON.stringify(data.data.RspCode))
+      if (data.data.RspCode =='0000'){
+        wx.showModal({
+          content: '关联成功！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              wx.redirectTo({
+                url: '../user/getPhone',
+              })
+            }
+          }
+        });        
+      } else {
+        wx.showModal({
+          content: '关联失败！',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            }
+          }
+        });
+      }
     })
   }
 })

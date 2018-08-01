@@ -1,5 +1,24 @@
 <!--pages/user/getPhone.wxml-->
 <view class="container1">
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">现关联账号：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <text>{{linkUtname}}</text>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">现关联身份：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <text>{{linkUtp}}</text>
+        </view>
+    </view>
+  </view>
+  <view class="weui-cells__title">重新关联账号：</view>
   <view class="weui-cells weui-cells_after-title">
     <view class="weui-cell weui-cell_input">
         <view class="weui-cell__hd">
