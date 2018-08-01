@@ -1,0 +1,29 @@
+/**taskList.wxss**/
+
+/* @import "../../style/weui.wxss" */
+
+/* @import "../../style/example.wxss" */
+
+/* .weui-flex1{
+  width: 320px;height: 50px; background: green;
+} */
+
+.weui-flex {
+  width: 320px;
+  height: 50px;
+  background: green;
+}
+
+.placeholder{
+  text-align: center;
+  /* vertical-align: middle; */
+  line-height: 50px;
+  margin-top: -50px;
+   color: white;
+}
+.mainPage{
+  padding-left: 5px;
+
+  line-height: 50px;
+  color: white;
+}

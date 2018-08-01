@@ -1,0 +1,14 @@
+<!--taskList.wxml-->
+
+
+
+
+<view class='weui-flex'>
+  <view class="weui-flex__item">
+    <view class="mainPage">主页</view>
+    <view class="placeholder">作业列表</view>
+  </view>
+</view>
+
+
+<!-- <view id='tapTest' data-hi='weChat' bindtap='tapName'>click me!</view> -->
