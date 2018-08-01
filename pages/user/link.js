@@ -76,7 +76,24 @@ Page({
     this.setData({ selUtp: e.detail.value.substring(e.detail.value.indexOf('&') + 1, e.detail.value.length) });
   },
   link: function(){
+    var uid = this.data.selUid;
+    var utp = this.data.selUtp;
+    var mobile = this.data.inputPhone;
     console.log('selUid===' + this.data.selUid);
     console.log('selUtp===' + this.data.selUtp);
+    var enData1 = {
+      wxid: wx.getStorageSync(storageKeyName.unionId),
+      uid: uid,
+      mobile: mobile
+    };
+    var comData1 = {
+      uuid: wx.getStorageSync(storageKeyName.UUID), //用户设备号
+      appid: wx.getStorageSync(storageKeyName.appId), //appid
+      shaketype: wx.getStorageSync(storageKeyName.shakeType),
+      utp: utp
+    };
+    httpUtil.postDataEncry('WxUserUn', enData1, comData1, 0, function (data) {
+      console.log(JSON.stringify(data.data.RspData))
+    })
   }
 })
