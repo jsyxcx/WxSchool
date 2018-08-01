@@ -25,7 +25,18 @@
             <view class="weui-label">关联手机号：</view>
         </view>
         <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入手机号" value="{{inputPhone}}"/>
+            <input class="weui-input" placeholder="请输入手机号" value="{{inputPhone}}" bindinput='inputMobile'/>
+        </view>
+        <view class="weui-cell__ft">
+            <view class="weui-vcode-btn" bindtap='getCode'>获取验证码</view>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+            <view class="weui-label">验证码：</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入验证码" value="{{code}}" bindinput='inputCode'/>
         </view>
     </view>
   </view>
