@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/paper/paper",
     "pages/user/user",
     "pages/user/login",
@@ -23,7 +22,7 @@
       {
         "selectedIconPath": "images/paper.png",
         "iconPath": "images/paper.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/paper/paper",
         "text": "作业"
       },
       {

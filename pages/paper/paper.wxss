@@ -1,1 +1,18 @@
 /* pages/paper/paper.wxss */
+.hd_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.statisList{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.statisItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
