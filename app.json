@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/paper/commit",
     "pages/paper/paper",
     "pages/user/user",
     "pages/user/login",
