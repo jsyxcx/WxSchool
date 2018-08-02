@@ -9,9 +9,9 @@
         <view class="weui-cell">
             <view class="weui-cell__bd">
                 <textarea class="weui-textarea" placeholder="请输入答案" style="height: 6em" />
-                <image src='../../../images/camera.png' class='commit_png'></image>
-                <image src='../../../images/image.png' class='commit_png'></image>
-                <image src='../../../images/radio.png' class='commit_png'></image>
+                <image src='../../images/camera.png' class='commit_png' bindtap="camera"></image>
+                <image src='../../images/image.png' class='commit_png' bindtap="chooseimage"></image>
+                <image src='../../images/radio.png' class='commit_png'></image>
             </view>
         </view>
     </view>
