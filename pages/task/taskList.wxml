@@ -8,6 +8,34 @@
     <view class="mainPage">主页</view>
     <view class="placeholder">作业列表</view>
   </view>
+
+</view>
+<view class="page__bd">
+  <text>一年级1601班王龙作业<text class='subject'>【语文】</text></text>
+</view>
+<view class="page__bd">
+  <text class='date'>统计周期：2018-6-23至2018-6-27</text>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      <!-- <image style='width:30px;height:26px;' src='./image/calendar.png'></image>: {{date}} -->
+      <image style='width:30px;height:26px;' src='./image/calendar.png'></image>
+    </view>
+  </picker>
+
+</view>
+<view class='task'>
+  <text >共计作业</text>
+  <text>已交作业</text>
+  <text>未交作业</text>
+  <text>已批作业</text>
+  <text>未批作业</text>
+</view>
+<view class='times'>
+  <text >1次</text>
+  <text>2次</text>
+  <text>3次</text>
+  <text>4次</text>
+  <text>5次</text>
 </view>
 
 

@@ -9,21 +9,61 @@
 } */
 
 .weui-flex {
-  width: 320px;
+  /* width: 900px; */
   height: 50px;
-  background: green;
+  background: #3cc51f;
 }
 
-.placeholder{
+.placeholder {
   text-align: center;
   /* vertical-align: middle; */
   line-height: 50px;
   margin-top: -50px;
-   color: white;
+  color: white;
 }
-.mainPage{
-  padding-left: 5px;
 
+.mainPage {
+  padding-left: 5px;
   line-height: 50px;
   color: white;
+}
+
+.page__bd {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subject {
+  color: #3cc51f;
+}
+
+.date {
+  color: #c8c8c8;
+  font-size: 13px;
+}
+
+picker {
+  margin-left: 250px;
+  margin-top: -25px;
+}
+
+/* 已交作业等文字的样式 */
+
+.task {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+
+.task Text {
+  padding-right: 12px;
+}
+
+.times {
+  font-size: 13px;
+  text-align: center;
+}
+
+.times Text {
+  padding-right: 35px;
 }
