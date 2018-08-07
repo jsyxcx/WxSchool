@@ -60,10 +60,29 @@ picker {
 }
 
 .times {
-  font-size: 13px;
-  text-align: center;
+  margin-left: 40px;
+  /* text-align: center; */
 }
 
-.times Text {
-  padding-right: 35px;
+.num-times {
+  font-size: 13px;
 }
+
+.weui-panel__bd {
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.weui-panel__bd {
+  margin: 10px 5px;
+}
+
+.list-date {
+  color: #999;
+  margin-left: 130px;
+  font-size: 13px;
+}
+
+/* .times Text {
+  padding-right: 35px;
+} */

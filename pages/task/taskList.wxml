@@ -24,19 +24,49 @@
 
 </view>
 <view class='task'>
-  <text >共计作业</text>
+  <text>共计作业</text>
   <text>已交作业</text>
   <text>未交作业</text>
   <text>已批作业</text>
   <text>未批作业</text>
 </view>
 <view class='times'>
-  <text >1次</text>
-  <text>2次</text>
-  <text>3次</text>
-  <text>4次</text>
-  <text>5次</text>
+  <text class='num-times'>1次</text>
+</view>
+<view class='' style="margin-left: 105px;margin-top:-30px;">
+  <text class='num-times'>2次</text>
+</view>
+<view class='' style="margin-left: 170px;margin-top: -30px;">
+  <text class='num-times'>3次</text>
+</view>
+<view class='' style="margin-left: 235px;margin-top: -30px;">
+  <text class='num-times'>4次</text>
+</view>
+<view class='' style="margin-left: 300px;margin-top: -30px;">
+  <text class='num-times'>5次</text>
 </view>
 
+<view class="weui-panel__bd">
 
+
+  <view class="weui-media-box__bd ">
+    <text class="weui-media-box__title ">语文作业【李云】</text>
+    <text class='list-date'>2018-6-23</text>
+    
+    <text class="weui-media-box__desc ">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。...</text>
+  </view>
+
+</view>
+<view class="weui-panel__bd">
+
+  <view class="weui-media-box__hd">
+    <image class="weui-media-box__thumb " src=" " alt=" "></image>
+  </view>
+  <view class="weui-media-box__bd ">
+    <text class="weui-media-box__title ">语文作业【李云】</text>
+    <text class='list-date'>2018-6-23</text>
+    <text class="weui-media-box__desc ">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。...</text>
+  </view>
+
+</view>
 <!-- <view id='tapTest' data-hi='weChat' bindtap='tapName'>click me!</view> -->
