@@ -38,6 +38,14 @@ var storageKeyName = (function (mod) {
   mod.appId = 'wxxcx';
   mod.publicParameter = 'publicParameter'//共用参数
   mod.personalInfo = 'personalInfo'; //个人信息，登录成功后返回值
+
+  mod.qiNiuHttp = 'https';
+  mod.qiNiuSpace = 'qn-educds.jiaobaowang.net';
+  mod.getUpLoadToKenUrl = 'https://jbyc.jiaobaowang.net:8504/Api/QiNiu/GetUpLoadToKen';
+  mod.qiNiuAppId = 4;
+  mod.qiNiuAppPwd = 'jsy@180526';
+  mod.uploadSpace = "pc/";
+  mod.projectName = "xiaoxuntong";
    /***********key值 end *****************/
   return mod;
 })(storageKeyName || {});
