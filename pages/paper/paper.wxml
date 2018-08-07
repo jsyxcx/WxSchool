@@ -33,7 +33,7 @@
                   <view class="weui-media-box__info__meta">已交</view>
                   <view class="weui-media-box__info__meta">已批</view>
                   <view class="weui-media-box__info__meta">95分</view>
-                  <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" style='color: blue'>编辑</view>
+                  <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" style='color: blue' bindtap='edit'>编辑</view>
               </view>
           </view>
       </view>
