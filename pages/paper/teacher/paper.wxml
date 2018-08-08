@@ -1,4 +1,45 @@
 <!--pages/paper/teacher/paper.wxml-->
 <view class="container1">
-  
+  <dl class="menu">
+      <dt data-index="0" bindtap="tapMainMenu">年级</dt>
+      <dd class="{{subMenuDisplay[0]}}">
+        <ul>
+            <li class="{{subMenuHighLight[0][0]}}" data-index="0-0" bindtap="tapSubMenu">全部</li>
+            <li class="{{subMenuHighLight[0][1]}}" data-index="0-1" bindtap="tapSubMenu">一年级</li>
+            <li class="{{subMenuHighLight[0][2]}}" data-index="0-2" bindtap="tapSubMenu">二年级</li>
+        </ul>
+    </dd>
+    <dt data-index="1" bindtap="tapMainMenu">班级</dt>
+      <dd class="{{subMenuDisplay[1]}}">
+        <ul>
+            <li class="{{subMenuHighLight[1][0]}}" data-index="1-0" bindtap="tapSubMenu">全部</li>
+            <li class="{{subMenuHighLight[1][1]}}" data-index="1-1" bindtap="tapSubMenu">1601</li>
+            <li class="{{subMenuHighLight[1][2]}}" data-index="1-2" bindtap="tapSubMenu">1602</li>
+        </ul>
+    </dd>
+    <dt data-index="2" bindtap="tapMainMenu">科目</dt>
+      <dd class="{{subMenuDisplay[2]}}">
+        <ul>
+            <li class="{{subMenuHighLight[2][0]}}" data-index="2-0" bindtap="tapSubMenu">全部</li>
+            <li class="{{subMenuHighLight[2][1]}}" data-index="2-1" bindtap="tapSubMenu">语文</li>
+            <li class="{{subMenuHighLight[2][2]}}" data-index="2-2" bindtap="tapSubMenu">数学</li>
+        </ul>
+    </dd>
+    <dt data-index="3" bindtap="tapMainMenu">上交登记</dt>
+      <dd class="{{subMenuDisplay[3]}}">
+        <ul>
+            <li class="{{subMenuHighLight[3][0]}}" data-index="3-0" bindtap="tapSubMenu">全部</li>
+            <li class="{{subMenuHighLight[3][1]}}" data-index="3-1" bindtap="tapSubMenu">未交完</li>
+            <li class="{{subMenuHighLight[3][2]}}" data-index="3-2" bindtap="tapSubMenu">已交完</li>
+        </ul>
+    </dd>
+    <dt data-index="4" bindtap="tapMainMenu">批改进度</dt>
+      <dd class="{{subMenuDisplay[4]}}">
+        <ul>
+            <li class="{{subMenuHighLight[4][0]}}" data-index="4-0" bindtap="tapSubMenu">全部</li>
+            <li class="{{subMenuHighLight[4][1]}}" data-index="4-1" bindtap="tapSubMenu">批改中</li>
+            <li class="{{subMenuHighLight[4][2]}}" data-index="4-2" bindtap="tapSubMenu">批改完毕</li>
+        </ul>
+    </dd>
+  </dl>
 </view>

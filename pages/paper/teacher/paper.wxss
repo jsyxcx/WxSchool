@@ -1,1 +1,55 @@
 /* pages/paper/teacher/paper.wxss */
+/*总菜单容器*/
+.menu {
+    display: block;
+    height: 38px;
+}
+
+/*一级菜单*/
+.menu dt {
+    font-size: 15px;
+    float: left;
+    /*hack*/
+    width: 20%;
+    height: 38px;
+    border-right: 0px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #5a5a5a;
+    line-height: 38px;
+}
+
+/*二级菜单外部容器样式*/
+.menu dd{
+    position: absolute;
+    width: 100%;
+    /*hack*/
+    top:39px;
+    left:0;
+    z-index:999;
+}
+
+/*二级菜单普通样式*/
+.menu li{
+    font-size: 14px;
+    line-height: 34px;
+    color: #575757;
+    height: 34px;
+    display: block;
+    padding-left: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+/*二级菜单高亮样式*/
+.menu li.highlight{
+    background-color: #f4f4f4;
+}
+/* 显示与隐藏 */
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
