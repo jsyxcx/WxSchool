@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/paper/paper",
-    "pages/paper/commit",
+    "pages/paper/teacher/paper",
+    "pages/paper/parent/paper",
+    "pages/paper/parent/commit",
     "pages/user/user",
     "pages/user/login",
     "pages/user/link",
@@ -23,7 +24,7 @@
       {
         "selectedIconPath": "images/paper.png",
         "iconPath": "images/paper.png",
-        "pagePath": "pages/paper/paper",
+        "pagePath": "pages/paper/teacher/paper",
         "text": "作业"
       },
       {

@@ -1,5 +1,5 @@
 // pages/paper/commit.js
-const qiniuUploader = require("../../utils/qiniu/qiniuUploader")
+const qiniuUploader = require("../../../utils/qiniu/qiniuUploader")
 // 初始化七牛相关参数
 function initQiniu() {
   var options = {
