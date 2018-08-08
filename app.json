@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/paper/teacher/batchComment",
     "pages/paper/teacher/paper",
     "pages/paper/parent/paper",
     "pages/paper/parent/commit",
@@ -24,7 +25,7 @@
       {
         "selectedIconPath": "images/paper.png",
         "iconPath": "images/paper.png",
-        "pagePath": "pages/paper/teacher/paper",
+        "pagePath": "pages/paper/teacher/batchComment",
         "text": "作业"
       },
       {

@@ -1,44 +1,4 @@
 <!--pages/paper/teacher/paper.wxml-->
 <view class="container1">
-  <view class="weui-panel">
-      <view class="weui-panel__hd">请选择学生</view>
-      <view class="weui-panel__bd">
-          <view class='onlinechoose'>
-            <view class='student_list flex_center' wx:for="{{items}}" wx:key="items" wx:for-item="i" data-id="{{index}}" bindtap='select'>
-              <view class='list_cons flex_start'>
-                <view class='lefts'>
-                    <block wx-if="{{!i.checked}}">
-                      <view class='icon_none'></view>
-                    </block>
-                    <block wx-if="{{i.checked}}">
-                      <icon type="success" size="30" color="red" />
-                    </block>
-                </view>
-                {{i.name}}
-              </view>
-            </view>
-          </view>
-      </view>
-  </view>
-  <view class='bottom flex_between'>
-    <view class='left flex_start'>
-      <block wx:if="{{select_all}}">
-        <view bindtap='select_none' class='flex_start'>
-          <icon type="success" size="30" color="red" />
-          <view>
-            取消全选
-          </view>
-        </view>
-      </block>
-      <block wx:if="{{!select_all}}">
-        <view bindtap='select_all' class='flex_start'>
-          <view class='select_none'>
-          </view>
-          <view>
-            全选
-          </view>
-        </view>
-      </block>
-    </view>
-  </view>
+  
 </view>
