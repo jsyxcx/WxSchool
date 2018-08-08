@@ -18,7 +18,7 @@
   <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
       <!-- <image style='width:30px;height:26px;' src='./image/calendar.png'></image>: {{date}} -->
-      <image style='width:30px;height:26px;' src='./image/calendar.png'></image>
+      <image style='width:30px;height:26px;' src='../../images/calendar.png'></image>
     </view>
   </picker>
 
