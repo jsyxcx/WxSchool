@@ -60,5 +60,11 @@ Page({
     this.setData({
       subMenuHighLight: this.data.newSubMenuHighLight
     });
+  },
+  tapClose: function(){
+    console.log("close");
+    this.setData({
+      subMenuDisplay: initSubMenuDisplay()
+    });
   }
 });
