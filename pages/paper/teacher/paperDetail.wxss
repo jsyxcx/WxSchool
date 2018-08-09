@@ -1,0 +1,35 @@
+/* pages/paper/teacher/paperDetail.wxss */
+.hd_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu {
+    display: block;
+    height: 38px;
+}
+
+/*一级菜单*/
+.menu dt {
+    font-size: 15px;
+    float: left;
+    /*hack*/
+    width: 50%;
+    height: 38px;
+    border-right: 0px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #5a5a5a;
+    line-height: 38px;
+}
+
+.menu dt.clicked{
+    color: #6cf710;
+}
+
+.menu dt.normal{
+    color: #5a5a5a;
+}
+
