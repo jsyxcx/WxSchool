@@ -82,7 +82,19 @@ picker {
   margin-left: 130px;
   font-size: 13px;
 }
-
+/* 横着的分割View样式 */
+/*分割线样式*/
+.divLine{
+ background: #999;
+ /* width: 100%; */
+ height: 1px;
+ margin: 0 2px;
+ margin-bottom:10px;
+}
+.image{
+  width: 200px;
+  height: 200px;
+}
 /* .times Text {
   padding-right: 35px;
 } */
