@@ -30,7 +30,7 @@
     </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">评语</view>
+    <view class="weui-cells__title">评语（评价人：王老师）</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -39,7 +39,7 @@
         </view>
         <view class="weui-cell">
             <view class="weui-cell__bd">
-                <view style='font-size: 30rpx;'>做的不错 (2018.02.01 13:30)</view>
+                <view style='font-size: 30rpx;'>做的不错222 (2018.02.01 13:30)</view>
             </view>
         </view>
     </view>

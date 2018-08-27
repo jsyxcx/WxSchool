@@ -1,7 +1,14 @@
 <!--pages/paper/paper.wxml-->
 <view class="container1">
-  <view class="hd_center">一年级XXX作业<view style='color: blue'>【语文】</view></view>
-  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计周期：1998-2008<view></view></view>
+  <view class="hd_center">一年级XXX作业【
+    <view style='color: blue'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[index]}}</picker>
+    </view>】
+  </view>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{date1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate1Change">{{date1}}</picker>
+  <view></view></view>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{date2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate2Change">{{date2}}</picker>
+  <view></view></view>
   <view class="statisList" style='font-size: 20rpx; color: red'>
     <view class='statisItem'>
       <text>共计作业</text>
@@ -25,10 +32,10 @@
     </view>
   </view>
   <view class="weui-panel">
-      <view class="weui-panel__hd">语文作业【李云】| 2008-01-01</view>
+      <view class="weui-panel__hd" bindtap='detail'>语文作业【李云】| 2008-01-01</view>
       <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_text">
-              <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+              <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
               <view class="weui-media-box__info">
                   <view class="weui-media-box__info__meta">已交</view>
                   <view class="weui-media-box__info__meta">已批</view>
