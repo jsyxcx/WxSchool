@@ -1,12 +1,11 @@
 {
   "pages":[
+    "pages/paper/teacher/paper",
+    "pages/paper/teacher/paperDetail",
+    "pages/paper/teacher/batchComment",
     "pages/paper/parent/paper",
     "pages/paper/parent/commit",
     "pages/paper/parent/paperDetail",
-    "pages/paper/teacher/publish", 
-    "pages/paper/teacher/paperDetail",
-    "pages/paper/teacher/paper",
-    "pages/paper/teacher/batchComment",
     "pages/user/user",
     "pages/user/login",
     "pages/user/link",
@@ -28,7 +27,7 @@
       {
         "selectedIconPath": "images/paper.png",
         "iconPath": "images/paper.png",
-        "pagePath": "pages/paper/parent/paper",
+        "pagePath": "pages/paper/teacher/paper",
         "text": "作业"
       },
       {

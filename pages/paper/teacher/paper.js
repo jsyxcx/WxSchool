@@ -1,3 +1,4 @@
+var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 // pages/paper/teacher/paper.js
 function initSubMenuDisplay() {
   return ['hidden', 'hidden', 'hidden', 'hidden', 'hidden'];
@@ -17,7 +18,13 @@ function initSubMenuHighLight() {
 Page({
   data: {
     subMenuDisplay: initSubMenuDisplay(),
-    newSubMenuHighLight: initSubMenuHighLight()
+    newSubMenuHighLight: initSubMenuHighLight(),
+    tabs: ["批改作业", "布置作业", "作业报表"],
+    activeIndex: 0,
+    sliderOffset: 0,
+    sliderLeft: 0,
+    subjects: ["语文", "数学", "英语"],
+    subjectIndex: 0
   },
   tapMainMenu: function (e) {
     //      获取当前显示的一级菜单标识
@@ -66,5 +73,29 @@ Page({
     this.setData({
       subMenuDisplay: initSubMenuDisplay()
     });
+  },
+  onLoad: function () {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
+  },
+  tabClick: function (e) {
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
+  bindSubjectChange: function (e) {
+    console.log('picker account 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      subjectIndex: e.detail.value
+    })
   }
 });

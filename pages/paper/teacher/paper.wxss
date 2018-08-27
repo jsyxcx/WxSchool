@@ -53,3 +53,13 @@
 .hidden {
     display: none;
 }
+.hd_center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.commit_png{
+  width: 30px; 
+  height: 30px;
+}
