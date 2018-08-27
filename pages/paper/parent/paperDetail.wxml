@@ -1,0 +1,47 @@
+<!--pages/paper/parent/paperDetail.wxml-->
+<view class="container1">
+  <view class="hd_center">语文作业</view>
+  <view class="hd_center" style='font-size: 30rpx; color: gray'>王老师|2008-01-01<view></view></view>
+  <view class="page__bd">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view style='font-size: 30rpx;'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            </view>
+        </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">学生答案</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view style='font-size: 30rpx;'>我知道的，我什么都知道</view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">得分</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view style='font-size: 30rpx;'>95分</view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">评语</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view style='font-size: 30rpx;'>做的不错 (2018.02.01 13:30)</view>
+            </view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view style='font-size: 30rpx;'>做的不错 (2018.02.01 13:30)</view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>
