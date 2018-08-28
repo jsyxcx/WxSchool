@@ -1,16 +1,16 @@
-<!--pages/paper/teacher/batchComment.wxml-->
+<!--pages/paper/teacher/batchReg.wxml-->
 <view class="container1">
-  <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd">
-              <input class="weui-input" placeholder="请输入分数（0-100），允许小数点一位" />
-          </view>
-      </view>
-  </view>
-  <view class="weui-cells weui-cells_after-title">
-    <view class="weui-cell">
-        <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="请输入评价内容（最多2000字）" style="height: 3.3em" />
+  <view class="page__bd">
+    <view class="weui-cells__title">递交状态统一修改为</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <radio-group class="radio-group" bindchange="radioChange">
+                <radio value="1" size="30" checked="checked"/>已交
+                <radio value="2" size="30" checked=""/>未交
+                <radio value="3" size="30" checked=""/>补交
+              </radio-group>
+            </view>
         </view>
     </view>
   </view>

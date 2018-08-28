@@ -6,7 +6,7 @@
   
   <view class="button-sp-area">
       <button class="weui-btn mini-btn" type="primary" size="mini" style='width:40%' bindtap='batchComment'>批量评价</button>
-      <button class="weui-btn mini-btn" type="primary" size="mini" style='width:40%'>批量登记</button>
+      <button class="weui-btn mini-btn" type="primary" size="mini" style='width:40%' bindtap='batchReg'>批量登记</button>
       <button class="weui-btn mini-btn" type="warn" size="mini" style='width:20%'>撤销</button>
   </view>
   <dl class="menu">

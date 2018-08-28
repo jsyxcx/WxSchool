@@ -50,5 +50,10 @@ Page({
     wx.navigateTo({
       url: 'batchComment',
     })
+  },
+  batchReg: function(){
+    wx.navigateTo({
+      url: 'batchReg',
+    })
   }
 })

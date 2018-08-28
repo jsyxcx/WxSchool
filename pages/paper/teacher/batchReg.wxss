@@ -1,4 +1,4 @@
-/* pages/paper/teacher/batchComment.wxss */
+/* pages/paper/teacher/batchReg.wxss */
 .bottom{
   width: 100%;
   height: 100rpx;
