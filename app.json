@@ -3,6 +3,7 @@
     "pages/paper/teacher/paper",
     "pages/paper/teacher/paperDetail",
     "pages/paper/teacher/batchComment",
+    "pages/paper/teacher/comment",
     "pages/paper/parent/paper",
     "pages/paper/parent/commit",
     "pages/paper/parent/paperDetail",

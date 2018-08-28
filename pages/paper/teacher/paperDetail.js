@@ -45,5 +45,10 @@ Page({
     this.setData({
       menuColor: newMenuColor
     });
+  },
+  batchComment: function(){
+    wx.navigateTo({
+      url: 'batchComment',
+    })
   }
 })

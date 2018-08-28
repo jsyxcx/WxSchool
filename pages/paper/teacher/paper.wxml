@@ -57,10 +57,10 @@
                     </dl>
                     <view bindtap='tapClose'>
                       <view class="weui-panel">
-                          <view class="weui-panel__hd">语文作业【一年级 1601班】| 2008-01-01</view>
+                          <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1601班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
-                                  <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+                                  <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
                                       <view class="weui-media-box__info__meta">已批/未批：未批改</view>
@@ -70,10 +70,10 @@
                           </view>
                       </view>
                       <view class="weui-panel">
-                          <view class="weui-panel__hd">语文作业【一年级 1602班】| 2008-01-01</view>
+                          <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1602班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
-                                  <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+                                  <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
                                       <view class="weui-media-box__info__meta">已批/未批：未批改</view>
@@ -83,10 +83,10 @@
                           </view>
                       </view>
                       <view class="weui-panel">
-                          <view class="weui-panel__hd">语文作业【一年级 1603班】| 2008-01-01</view>
+                          <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1603班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
-                                  <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+                                  <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
                                       <view class="weui-media-box__info__meta">已批/未批：未批改</view>

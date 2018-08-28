@@ -97,5 +97,10 @@ Page({
     this.setData({
       subjectIndex: e.detail.value
     })
+  },
+  detail: function(){
+    wx.navigateTo({
+      url: 'paperDetail',
+    })
   }
 });

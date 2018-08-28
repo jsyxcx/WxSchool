@@ -1,0 +1,54 @@
+<!--pages/paper/teacher/comment.wxml-->
+<view class="container1" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="page__hd" style='display: flex; margin-left: 30rpx; margin-right: 30rpx;'>
+        <image src='../../../images/user.png' style="width: 70rpx; height: 70rpx"></image>
+        <view>
+          <view class="page__title">王龙</view>
+          <view class="page__desc" style='font-size: 30rpx;'>一年级1061班</view>
+        </view>
+    </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">学生答案</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view style='font-size: 30rpx;'>我知道的，我什么都知道</view>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">递交状态</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__bd">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[index]}}</picker>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">分数</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="请输入分数（0-100），允许小数点一位" />
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">输入评价</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <textarea class="weui-textarea" placeholder="请输入评价内容（最多2000字）" style="height: 3.3em" />
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="showTopTips">提交</button>
+  </view>
+</view>
