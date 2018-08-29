@@ -141,7 +141,102 @@
                     </view>
                   </view>
                 </view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}"></view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view class="container1">
+                    <view class="hd_center">一年级1061班XXX作业统计表【
+                      <view style='color: blue'>
+                        <picker bindchange="bindPickerSChange" value="{{indexS}}" range="{{arrayS}}">{{arrayS[indexS]}}</picker>
+                      </view>】
+                    </view>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateS1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateS1Change">{{dateS1}}</picker>
+                    <view></view></view>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateS2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateS2Change">{{dateS2}}</picker>
+                    <view></view></view>
+                    <view class="statisList" style='font-size: 20rpx; color: red'>
+                      <view class='statisItem'>
+                        <text>共计作业</text>
+                        <text style='color: black'>5次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>已交作业</text>
+                        <text style='color: black'>5次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>未交作业</text>
+                        <text style='color: black'>0次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>已批作业</text>
+                        <text style='color: black'>3次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>未批作业</text>
+                        <text style='color: black'>2次</text>
+                      </view>
+                    </view>
+                    <view class="weui-panel">
+                        <view class="weui-panel__hd">李云| 2008-01-01</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+                                <view class="weui-media-box__info">
+                                    <view class="weui-media-box__info__meta">已交</view>
+                                    <view class="weui-media-box__info__meta">已批</view>
+                                    <view class="weui-media-box__info__meta">80分</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                  <view class="container1">
+                    <view class="hd_center">一年级1061班作业统计表【
+                      <view style='color: blue'>
+                        <picker bindchange="bindPickerCChange" value="{{indexC}}" range="{{arrayC}}">{{arrayC[indexC]}}</picker>
+                      </view>】
+                    </view>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateC1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateC1Change">{{dateC1}}</picker>
+                    <view></view></view>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateC2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateC2Change">{{dateC2}}</picker>
+                    <view></view></view>
+                    <view class="statisList" style='font-size: 20rpx; color: red'>
+                      <view class='statisItem'>
+                        <text>共计作业</text>
+                        <text style='color: black'>5次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>已交作业</text>
+                        <text style='color: black'>5次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>未交作业</text>
+                        <text style='color: black'>0次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>已批作业</text>
+                        <text style='color: black'>3次</text>
+                      </view>
+                      <view class='statisItem'>
+                        <text>未批作业</text>
+                        <text style='color: black'>2次</text>
+                      </view>
+                    </view>
+                    <view class="weui-panel">
+                        <view class="weui-panel__hd">王老师【语文】| 2008-01-01</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+                                <view class="weui-media-box__info">
+                                    <view class="weui-media-box__info__meta">已交/未交：40/0</view>
+                                    <view class="weui-media-box__info__meta">已批/未批：0/40</view>
+                                    <view class="weui-media-box__info__meta">平均分：80</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                  </view>
+                </view>
             </view>
         </view>
     </view>

@@ -19,12 +19,52 @@ Page({
   data: {
     subMenuDisplay: initSubMenuDisplay(),
     newSubMenuHighLight: initSubMenuHighLight(),
-    tabs: ["批改作业", "布置作业", "作业报表"],
+    tabs: ["批改作业", "布置作业", "学生报表", "班级报表"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
     subjects: ["语文", "数学", "英语"],
-    subjectIndex: 0
+    subjectIndex: 0,
+    arrayC: ['语文', '数学', '英语'],
+    indexC: 0,
+    dateC1: '2018-08-20',
+    dateC2: '2018-08-20',
+    arrayS: ['语文', '数学', '英语'],
+    indexS: 0,
+    dateS1: '2018-08-20',
+    dateS2: '2018-08-20'
+  },
+  bindPickerCChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      indexC: e.detail.value
+    })
+  },
+  bindDateC1Change: function (e) {
+    this.setData({
+      dateC1: e.detail.value
+    })
+  },
+  bindDateC2Change: function (e) {
+    this.setData({
+      dateC2: e.detail.value
+    })
+  },
+  bindPickerSChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      indexS: e.detail.value
+    })
+  },
+  bindDateS1Change: function (e) {
+    this.setData({
+      dateS1: e.detail.value
+    })
+  },
+  bindDateS2Change: function (e) {
+    this.setData({
+      dateS2: e.detail.value
+    })
   },
   tapMainMenu: function (e) {
     //      获取当前显示的一级菜单标识
@@ -101,6 +141,11 @@ Page({
   detail: function(){
     wx.navigateTo({
       url: 'paperDetail',
+    })
+  },
+  studentReport: function(){
+    wx.navigateTo({
+      url: 'studentReport',
     })
   }
 });
