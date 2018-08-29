@@ -1,0 +1,13 @@
+<!--pages/paper/teacher/commentList.wxml-->
+<view class="weui-panel weui-panel_access">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">已批（30人）</view>
+            <view style='font-size: 28rpx; color: grey'>张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、</view>
+        </view>
+        <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">未批（30人）</view>
+            <view style='font-size: 28rpx; color: grey'>张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、张三、李四、王五、</view>
+        </view>
+    </view>
+</view>

@@ -147,5 +147,15 @@ Page({
     wx.navigateTo({
       url: 'studentReport',
     })
+  },
+  handList: function(){
+    wx.navigateTo({
+      url: 'handList',
+    })
+  },
+  commentList: function(){
+    wx.navigateTo({
+      url: 'commentList',
+    })
   }
 });

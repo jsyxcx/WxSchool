@@ -228,8 +228,8 @@
                             <view class="weui-media-box weui-media-box_text">
                                 <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                 <view class="weui-media-box__info">
-                                    <view class="weui-media-box__info__meta">已交/未交：40/0</view>
-                                    <view class="weui-media-box__info__meta">已批/未批：0/40</view>
+                                    <view class="weui-media-box__info__meta" bindtap='handList'>已交/未交：40/0</view>
+                                    <view class="weui-media-box__info__meta" bindtap='commentList'>已批/未批：0/40</view>
                                     <view class="weui-media-box__info__meta">平均分：80</view>
                                 </view>
                             </view>
