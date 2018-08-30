@@ -10,7 +10,7 @@
         </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">学生答案</view>
+    <view class="weui-cells__title title">学生答案</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">得分</view>
+    <view class="weui-cells__title title">得分</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -30,7 +30,7 @@
     </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">评语（评价人：王老师）</view>
+    <view class="weui-cells__title title">评语（评价人：王老师）</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">

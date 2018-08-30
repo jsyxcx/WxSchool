@@ -10,7 +10,7 @@
         </view>
   </view>
   <view class="page__bd">
-    <view class="weui-cells__title">学生答案</view>
+    <view class="weui-cells__title title">学生答案</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -22,7 +22,7 @@
         </view>
     </view>
     <view class="weui-btn-area">
-        <button class="weui-btn" type="primary" bindtap="showTopTips">提交作业</button>
+        <button class="weui-btn" type="primary" bindtap="commit">提交作业</button>
     </view>
   </view>
 </view>

@@ -9,3 +9,12 @@
   width: 30px; 
   height: 30px;
 }
+
+.title{
+  background-color: #f5f5f5;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #00dd00;
+  height: 60rpx;
+  padding-top: 20rpx
+}

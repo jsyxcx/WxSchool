@@ -148,9 +148,9 @@
                         <picker bindchange="bindPickerSChange" value="{{indexS}}" range="{{arrayS}}">{{arrayS[indexS]}}</picker>
                       </view>】
                     </view>
-                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateS1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateS1Change">{{dateS1}}</picker>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateS1}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateS1Change">{{dateS1}}</picker>
                     <view></view></view>
-                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateS2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateS2Change">{{dateS2}}</picker>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateS2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateS2Change">{{dateS2}}</picker>
                     <view></view></view>
                     <view class="statisList" style='font-size: 20rpx; color: red'>
                       <view class='statisItem'>
@@ -196,9 +196,9 @@
                         <picker bindchange="bindPickerCChange" value="{{indexC}}" range="{{arrayC}}">{{arrayC[indexC]}}</picker>
                       </view>】
                     </view>
-                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateC1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateC1Change">{{dateC1}}</picker>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{dateC1}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateC1Change">{{dateC1}}</picker>
                     <view></view></view>
-                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateC2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateC2Change">{{dateC2}}</picker>
+                    <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateC2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateC2Change">{{dateC2}}</picker>
                     <view></view></view>
                     <view class="statisList" style='font-size: 20rpx; color: red'>
                       <view class='statisItem'>

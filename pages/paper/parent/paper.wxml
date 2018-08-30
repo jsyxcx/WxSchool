@@ -5,9 +5,9 @@
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[index]}}</picker>
     </view>】
   </view>
-  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{date1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate1Change">{{date1}}</picker>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{date1}}" start="2000-01-01" end="2500-01-01" bindchange="bindDate1Change">{{date1}}</picker>
   <view></view></view>
-  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{date2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate2Change">{{date2}}</picker>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{date2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDate2Change">{{date2}}</picker>
   <view></view></view>
   <view class="statisList" style='font-size: 20rpx; color: red'>
     <view class='statisItem'>
@@ -31,7 +31,7 @@
       <text style='color: black'>2次</text>
     </view>
   </view>
-  <view class="weui-panel">
+  <view class="weui-panel" style="margin-left: 20rpx; margin-right: 20rpx; border-style: solid; border-width: 1px;border-color: #cecece">
       <view class="weui-panel__hd" bindtap='detail'>语文作业【李云】| 2008-01-01</view>
       <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_text">

@@ -79,4 +79,15 @@ Page({
       }
     })
   },
+  commit: function() {
+    wx.showModal({
+      content: '是否确认提交？',
+      showCancel: true,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    });
+  }
 })

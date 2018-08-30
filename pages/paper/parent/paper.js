@@ -1,4 +1,18 @@
 // pages/paper/paper.js
+function compareDate(DateOne, DateTwo) {
+  var OneMonth = DateOne.substring(5, DateOne.lastIndexOf("-"));
+  var OneDay = DateOne.substring(DateOne.length, DateOne.lastIndexOf("-") + 1);
+  var OneYear = DateOne.substring(0, DateOne.indexOf("-"));
+  var TwoMonth = DateTwo.substring(5, DateTwo.lastIndexOf("-"));
+  var TwoDay = DateTwo.substring(DateTwo.length, DateTwo.lastIndexOf("-") + 1);
+  var TwoYear = DateTwo.substring(0, DateTwo.indexOf("-"));
+  if (Date.parse(OneMonth + "/" + OneDay + "/" + OneYear) > Date.parse(TwoMonth + "/" + TwoDay + "/" + TwoYear)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 Page({
 
   /**
@@ -17,14 +31,30 @@ Page({
     })
   },
   bindDate1Change: function (e) {
-    this.setData({
-      date1: e.detail.value
-    })
+    if (compareDate(e.detail.value, this.data.date2)){
+      wx.showToast({
+        title: '开始日期不可大于结束日期！',
+        icon: 'none',
+        duration: 3000
+      })
+    } else {
+      this.setData({
+        date1: e.detail.value
+      })
+    }
   }, 
   bindDate2Change: function (e) {
-    this.setData({
-      date2: e.detail.value
-    })
+    if (compareDate(e.detail.value, this.data.date2)) {
+      this.setData({
+        date2: e.detail.value
+      })
+    } else {
+      wx.showToast({
+        title: '结束日期不可小于开始日期！',
+        icon: 'none',
+        duration: 3000
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
