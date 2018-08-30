@@ -55,42 +55,42 @@
                           </ul>
                       </dd>
                     </dl>
-                    <view bindtap='tapClose'>
-                      <view class="weui-panel">
+                    <view bindtap='tapClose' style="margin-top: 10rpx">
+                      <view class="weui-panel panel-border">
                           <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1601班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
                                   <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
-                                      <view class="weui-media-box__info__meta">已批/未批：未批改</view>
-                                      <view class="weui-media-box__info__meta">平均分：95分</view>
+                                      <view class="weui-media-box__info__meta">已批/未批：未批</view>
+                                      <view class="weui-media-box__info__meta">平均分：100</view>
                                   </view>
                               </view>
                           </view>
                       </view>
-                      <view class="weui-panel">
+                      <view class="weui-panel panel-border">
                           <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1602班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
                                   <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
-                                      <view class="weui-media-box__info__meta">已批/未批：未批改</view>
-                                      <view class="weui-media-box__info__meta">平均分：60分</view>
+                                      <view class="weui-media-box__info__meta">已批/未批：未批</view>
+                                      <view class="weui-media-box__info__meta">平均分：60</view>
                                   </view>
                               </view>
                           </view>
                       </view>
-                      <view class="weui-panel">
+                      <view class="weui-panel panel-border">
                           <view class="weui-panel__hd" bindtap='detail'>语文作业【一年级 1603班】| 2008-01-01</view>
                           <view class="weui-panel__bd">
                               <view class="weui-media-box weui-media-box_text">
                                   <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
                                   <view class="weui-media-box__info">
                                       <view class="weui-media-box__info__meta">已交/未交：未登记</view>
-                                      <view class="weui-media-box__info__meta">已批/未批：未批改</view>
-                                      <view class="weui-media-box__info__meta">平均分：85分</view>
+                                      <view class="weui-media-box__info__meta">已批/未批：未批</view>
+                                      <view class="weui-media-box__info__meta">平均分：85</view>
                                   </view>
                               </view>
                           </view>
@@ -123,7 +123,7 @@
                               </view>
                           </view>
                       </view>
-                      <view class="weui-cells__title">接收人</view>
+                      <view class="weui-cells__title title">接收人</view>
                           <view class="weui-cells weui-cells_after-title">
                               <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                                   <view class="weui-cell__bd">年级</view>
@@ -152,7 +152,7 @@
                     <view></view></view>
                     <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateS2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateS2Change">{{dateS2}}</picker>
                     <view></view></view>
-                    <view class="statisList" style='font-size: 20rpx; color: red'>
+                    <view class="statisList" style='font-size: 30rpx; color: red'>
                       <view class='statisItem'>
                         <text>共计作业</text>
                         <text style='color: black'>5次</text>
@@ -175,7 +175,7 @@
                       </view>
                     </view>
                     <view class="weui-panel">
-                        <view class="weui-panel__hd">李云| 2008-01-01</view>
+                        <view class="weui-panel__hd title">李云| 2008-01-01</view>
                         <view class="weui-panel__bd">
                             <view class="weui-media-box weui-media-box_text">
                                 <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
@@ -200,7 +200,7 @@
                     <view></view></view>
                     <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{dateC2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDateC2Change">{{dateC2}}</picker>
                     <view></view></view>
-                    <view class="statisList" style='font-size: 20rpx; color: red'>
+                    <view class="statisList" style='font-size: 30rpx; color: red'>
                       <view class='statisItem'>
                         <text>共计作业</text>
                         <text style='color: black'>5次</text>
@@ -223,7 +223,7 @@
                       </view>
                     </view>
                     <view class="weui-panel">
-                        <view class="weui-panel__hd">王老师【语文】| 2008-01-01</view>
+                        <view class="weui-panel__hd title">王老师【语文】| 2008-01-01</view>
                         <view class="weui-panel__bd">
                             <view class="weui-media-box weui-media-box_text">
                                 <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>

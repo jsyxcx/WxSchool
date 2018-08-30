@@ -1,7 +1,7 @@
 <!--pages/paper/teacher/batchReg.wxml-->
 <view class="container1">
-  <view class="page__bd">
-    <view class="weui-cells__title">递交状态统一修改为</view>
+  <view class="page__bd" style='margin-bottom: -20rpx'>
+    <view class="weui-cells__title title" style='padding-bottom: 20rpx'>递交状态统一修改为</view>
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -15,7 +15,7 @@
     </view>
   </view>
   <view class="weui-panel">
-      <view class="weui-panel__hd">请选择学生</view>
+      <view class="weui-panel__hd title">请选择学生</view>
       <view class="weui-panel__bd">
           <view class='onlinechoose'>
             <view class='student_list flex_center' wx:for="{{items}}" wx:key="items" wx:for-item="i" data-id="{{index}}" bindtap='select'>

@@ -16,3 +16,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.panel-border{
+  margin-left: 20rpx; 
+  margin-right: 20rpx; 
+  border-style: solid; 
+  border-width: 1px;
+  border-color: #cecece
+}

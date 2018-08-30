@@ -1,8 +1,5 @@
 {
   "pages":[
-    "pages/paper/parent/paper",
-    "pages/paper/parent/commit",
-    "pages/paper/parent/paperDetail",
     "pages/paper/teacher/paper",
     "pages/paper/teacher/batchReg",
     "pages/paper/teacher/paperDetail",
@@ -10,6 +7,9 @@
     "pages/paper/teacher/comment",
     "pages/paper/teacher/handList",
     "pages/paper/teacher/commentList",
+    "pages/paper/parent/paper",
+    "pages/paper/parent/commit",
+    "pages/paper/parent/paperDetail",
     "pages/user/user",
     "pages/user/login",
     "pages/user/link",

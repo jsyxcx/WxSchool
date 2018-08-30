@@ -7,7 +7,7 @@
           </view>
       </view>
   </view>
-  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cells weui-cells_after-title" style='margin-bottom: -20rpx'>
     <view class="weui-cell">
         <view class="weui-cell__bd">
             <textarea class="weui-textarea" placeholder="请输入评价内容（最多2000字）" style="height: 3.3em" />
@@ -15,7 +15,7 @@
     </view>
   </view>
   <view class="weui-panel">
-      <view class="weui-panel__hd">请选择学生</view>
+      <view class="weui-panel__hd title">请选择学生</view>
       <view class="weui-panel__bd">
           <view class='onlinechoose'>
             <view class='student_list flex_center' wx:for="{{items}}" wx:key="items" wx:for-item="i" data-id="{{index}}" bindtap='select'>
