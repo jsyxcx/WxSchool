@@ -1,4 +1,5 @@
 // pages/user/getPhone.js
+var app = getApp();
 const storageKeyName = require('../../utils/encrypt/storageKeyName.js')
 const httpUtil = require('../../utils/encrypt/publicProtocolNew.js')
 var uuidv1 = require('../../utils/uuid/we-uuidv1')
@@ -28,9 +29,10 @@ Page({
       shaketype: wx.getStorageSync(storageKeyName.shakeType)
     };
     httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
-      // console.log(JSON.stringify(data.data.RspData))
+      console.log("=======aa=============" + JSON.stringify(data.data.RspData))
       var respData = data.data.RspData;
       var utpval = '';
+      app.globalData.userUtp = respData.utp; //全局用户身份
       if (respData.utp == 0) {
         utpval = '老师'
       } else if (respData.utp == 1) {

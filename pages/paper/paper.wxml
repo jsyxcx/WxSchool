@@ -241,3 +241,50 @@
         </view>
     </view>
 </view>
+<view class="container1 {{userUtp ? 'page-hide' : 'page-show'}}">
+  <view class="hd_center">一年级XXX作业【
+    <view style='color: blue'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">{{array[index]}}</picker>
+    </view>】
+  </view>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计开始日期：<picker class="weui-btn" mode="date" value="{{date1}}" start="2000-01-01" end="2500-01-01" bindchange="bindDate1Change">{{date1}}</picker>
+  <view></view></view>
+  <view class="hd_center" style='font-size: 30rpx; color: blue'>统计结束日期：<picker class="weui-btn" mode="date" value="{{date2}}" start="2000-01-01" end="2500-01-01" bindchange="bindDate2Change">{{date2}}</picker>
+  <view></view></view>
+  <view class="statisList" style='font-size: 20rpx; color: red'>
+    <view class='statisItem'>
+      <text>共计作业</text>
+      <text style='color: black'>5次</text>
+    </view>
+    <view class='statisItem'>
+      <text>已交作业</text>
+      <text style='color: black'>5次</text>
+    </view>
+    <view class='statisItem'>
+      <text>未交作业</text>
+      <text style='color: black'>0次</text>
+    </view>
+    <view class='statisItem'>
+      <text>已批作业</text>
+      <text style='color: black'>3次</text>
+    </view>
+    <view class='statisItem'>
+      <text>未批作业</text>
+      <text style='color: black'>2次</text>
+    </view>
+  </view>
+  <view class="weui-panel panel-border">
+      <view class="weui-panel__hd" bindtap='detail'>语文作业【李云】| 2008-01-01</view>
+      <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__desc" bindtap='detail'>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+              <view class="weui-media-box__info">
+                  <view class="weui-media-box__info__meta">已交</view>
+                  <view class="weui-media-box__info__meta">已批</view>
+                  <view class="weui-media-box__info__meta">95分</view>
+                  <view class="weui-media-box__info__meta weui-media-box__info__meta_extra" style='color: blue' bindtap='edit'>编辑</view>
+              </view>
+          </view>
+      </view>
+  </view>
+</view>

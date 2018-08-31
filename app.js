@@ -54,11 +54,76 @@ App({
       console.log('握手成功')
     });
 
+    //获取用户身份
+    var that = this;
+    wx.login({ //登录
+      success: function (res) {
+        var code = res.code;
+        if (code) {
+          console.log('code==' + code)
+          wx.setStorageSync(storageKeyName.code, code);
+          wx.getUserInfo({ //获取用户信息
+            success: function (res) {
+              console.log({ encryptedData: res.encryptedData, iv: res.iv, code: code });
+              that.globalData.userInfo = res.userInfo;
+
+              wx.request({ //获取用户唯一标识
+                url: 'https://jbyj.jiaobaowang.net/WxService/getId',
+                data: {
+                  encryptedData: res.encryptedData, iv: res.iv, code: code,
+                },
+                method: 'POST',
+                success: function (res) {
+                  console.log(res.data);
+                  console.log('openId==' + res.data.RspData.Data.openId);
+                  console.log('unionId==' + res.data.RspData.Data.unionId);
+                  wx.setStorageSync(storageKeyName.openId, res.data.RspData.Data.openId);
+                  wx.setStorageSync(storageKeyName.unionId, res.data.RspData.Data.unionId);
+                  that.globalData.userId = res.data.RspData.Data.unionId;
+
+                  var enData1 = {
+                    wxid: wx.getStorageSync(storageKeyName.unionId)
+                  };
+                  var comData1 = {
+                    uuid: wx.getStorageSync(storageKeyName.UUID), //用户设备号
+                    appid: wx.getStorageSync(storageKeyName.appId), //appid
+                    shaketype: wx.getStorageSync(storageKeyName.shakeType)
+                  };
+                  httpUtil.postDataEncry('WxAuthLogin', enData1, comData1, 0, function (data) {
+
+                    console.log(JSON.stringify(data.data.RspData))
+                    var respData = data.data.RspData;
+                    that.globalData.userUtp = respData.utp; //全局用户身份
+                    console.log("user utp:");
+                    console.log(that.globalData.userUtp);
+                  })
+                },
+                fail: function (res) {
+                  console.log(res.data);
+                  console.log('is failed')
+                },
+                complete: function () {
+                  console.log('redirectTo');
+
+                }//请求完成后执行的函数
+              })
+            },
+            fail: function (res) {
+              console.log('获取用户信息失败')
+              console.log(res)
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+      }
+    });
     // }
   },
   globalData: {
     userInfo: null,
     userId: '',
-    phoneNumber: ''
+    phoneNumber: '',
+    userUtp: -1
   }
 })

@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/paper/paper",
     "pages/paper/teacher/paper",
     "pages/paper/teacher/batchReg",
     "pages/paper/teacher/paperDetail",
@@ -31,7 +32,7 @@
       {
         "selectedIconPath": "images/paper.png",
         "iconPath": "images/paper.png",
-        "pagePath": "pages/paper/teacher/paper",
+        "pagePath": "pages/paper/paper",
         "text": "作业"
       },
       {
